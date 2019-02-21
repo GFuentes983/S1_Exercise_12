@@ -38,7 +38,7 @@ document.getElementById("calendar").innerHTML = createCalendar(thisDay);
 
 // Fuction to generate calendar table
 function createCalendar(calDate) {
-      var calendarHTML = ",table id='calendar_table'>"
+      var calendarHTML = "<table id='calendar_table'>"
       calendarHTML += calCaption(calDate);
       calendarHTML += "</table>";
       return calendarHTML
@@ -53,7 +53,7 @@ function calCaption(calDate) {
       var thisMonth = calDate.getMonth();
 
       // Determine current year
-      var thisYear = calDate.getYear();
+      var thisYear = calDate.getFullYear();
 
       // Write the caption
       return "<caption>" + monthName[thisMonth] + " " + thisYear + "</caption>";
